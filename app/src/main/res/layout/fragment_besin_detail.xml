@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detay"
+            type="com.sena.caloribook.model.Besin" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:context=".view.BesinDetailFragment">
+
+        <ImageView
+            android:id="@+id/detayImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:downloadImage="@{detay.gorsel}"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/detayIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detayImage"
+            android:layout_marginTop="8dp"
+            android:text="@{detay.isim}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/detayKalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detayIsim"
+            android:layout_marginTop="8dp"
+            android:text="@{detay.kalori}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/detayKarbon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detayKalori"
+            android:layout_marginTop="8dp"
+            android:text="@{detay.karbonhidrat}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/detayProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detayKarbon"
+            android:layout_marginTop="8dp"
+            android:text="@{detay.protein}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/detayYag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detayProtein"
+            android:layout_marginTop="8dp"
+            android:text="@{detay.yag}"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</layout>
